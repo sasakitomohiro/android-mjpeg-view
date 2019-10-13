@@ -356,7 +356,7 @@ public class MjpegView extends View{
 
                     //determine boundary pattern
                     //use the whole header as separator in case boundary locate in difference chunks
-                    Pattern pattern = Pattern.compile("--" + headerBoundary + "\\s+(.*)\\r\\n\\r\\n",Pattern.DOTALL);
+                    Pattern pattern = Pattern.compile(headerBoundary + "\\s+(.*)\\r\\n",Pattern.DOTALL);
                     Matcher matcher;
 
                     bis = new BufferedInputStream(connection.getInputStream());
